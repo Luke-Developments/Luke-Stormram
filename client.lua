@@ -43,8 +43,8 @@ CreateThread(function()
                 local ClosestDoor = exports.ox_doorlock:getClosestDoor()
                 return ClosestDoor and CanUseBreach('breakdoor') and ClosestDoor.distance <= 1.5
             end,
-            event = 'pacific-compoundbreach:client:breakdoor',
-            items = 'goldgun',
+            event = 'luke-door:client:breakdoor',
+            items = 'police_stormram',
             anyItem = false,
             distance = 1
         }
@@ -86,7 +86,7 @@ RegisterNetEvent('luke-door:client:breakdoor', function()
         }) then
             TriggerServerEvent('luke-door:server:setState', ClosestDoor.id, 1)
         else
-            exports['okokNotify']:Alert('Compound Breach', 'You have cancelled breaching the compound', 3000, 'error', false)
+            exports['okokNotify']:Alert('Door Breach', 'You have cancelled breaching the compound', 3000, 'error', false)
         end
     else
         exports['ps-ui']:Thermite(function(success)
