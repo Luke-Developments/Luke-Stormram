@@ -12,11 +12,4 @@ client_script 'client.lua'
 
 server_script 'server.lua'
 
-dependencies {
-  'ox_lib',
-  'ox_target',
-  'ox_inventory',
-  'ox_doorlock',
-}
-
 lua54 'yes'
